@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "B4APong": {
+      "applicationId": "dVEefsPv90Y9Ievq9Xhl8tsfKXoxtf0SUfegj6Oz"
+    },
+    "_default": {
+      "link": "B4APong"
+    }
+  }
+}
