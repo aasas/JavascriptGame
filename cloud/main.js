@@ -1,17 +1,16 @@
-// Parse.Cloud.beforeSave("Score", (request) => {
-//   if (request.object.get("score") % 2 == 0) {
-//     request.object.set("isEvenNumber", true);
-//   } else{
-//     request.object.set("isEvenNumber", false);
-//   }
-//   console.log(request.object.get("score"));
-// });
-
+Parse.Cloud.beforeSave("Score", (request, response) => {
+  if (request.object.get("score") % 2 == 0) {
+    request.object.set("isEvenNumber", true);
+  } else{
+    request.object.set("isEvenNumber", false);
+  }
+  response.success();
+});
 
 Parse.Cloud.define("getUser", async (request) => {
   var query = new Parse.Query("User");
   query.equalTo("objectId", request.params.user)
-  .find()
+  const results = await query.find()
   .then((results) => {
     console.log("results: "+ results.length);
     Response.success(results[0].get("username"));
@@ -19,6 +18,7 @@ Parse.Cloud.define("getUser", async (request) => {
   .catch(() => {
     Response.error("Score failed")
   });
+  return results;
 });
 
 
@@ -48,4 +48,10 @@ Parse.Cloud.job("resetScore", (request) =>  {
     }
     
   });
+});
+
+
+
+Parse.Cloud.define('hello', async (req, res) => {
+  return 'world';
 });
