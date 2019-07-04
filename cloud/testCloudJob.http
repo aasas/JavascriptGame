@@ -1,0 +1,8 @@
+
+
+
+
+curl -X POST 
+    -H 'X-Parse-Application-Id: dVEefsPv90Y9Ievq9Xhl8tsfKXoxtf0SUfegj6Oz' 
+    -H 'X-Parse-Master-Key: 3YvzvClhfSYznRMiLKOmwE5DZiK20EASOINtE0IY' 
+    https://parseapi.back4app.com/parse/jobs/resetScore

@@ -1,0 +1,16 @@
+
+
+
+
+
+curl -X POST    
+    -H "X-Parse-Application-Id: dVEefsPv90Y9Ievq9Xhl8tsfKXoxtf0SUfegj6Oz" 
+    -H "X-Parse-REST-API-Key: NBjXztBI8i3Ar1H1nk523cEkxq8LM6303PLyELYb"
+    -H "Content-Type: application/json" 
+    -d '{ "user": "JSYtSwfoEF" }'
+    https://parseapi.back4app.com/parse/functions/getUser
+
+
+
+
+

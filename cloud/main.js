@@ -22,7 +22,7 @@ Parse.Cloud.define("getUser", async (request) => {
 });
 
 
-Parse.Cloud.job("myJob", (request) =>  {
+Parse.Cloud.job("resetScore", (request) =>  {
   var query = new Parse.Query("Score");
 
   query.find({
